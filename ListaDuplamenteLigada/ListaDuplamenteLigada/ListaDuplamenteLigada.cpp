@@ -174,12 +174,13 @@ void excluirPrimeiroElemento()
 
 	else if (aux->prox == NULL) {
 		primeiro = NULL;
-		free(primeiro);
+		ultimo = NULL;
 
 		cout << "Voce excluiu o unico valor presente na lista, agora ela esta vazia!" << endl;
 	}
 	else {
 		primeiro = aux->prox;
+		primeiro->ant = NULL; 
 		free(aux);
 
 		cout << "Voce excluiu o elemento presente na primeira posicao da lista!" << endl;
@@ -194,8 +195,8 @@ void excluirUltimoElemento()
 		cout << "A lista esta vazia" << endl;
 	}
 	else if (aux->ant == NULL) {
-		ultimo = NULL; 
-		free(ultimo); 
+		primeiro = NULL;
+		ultimo = NULL;
 
 		cout << "Voce excluiu o unico valor valor presente na lista, agora ela esta vazia!" << endl;
 	}
