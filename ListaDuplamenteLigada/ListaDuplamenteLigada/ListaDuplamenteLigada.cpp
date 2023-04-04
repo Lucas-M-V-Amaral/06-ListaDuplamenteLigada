@@ -160,7 +160,6 @@ void exibirReverso()
 
 			cout << aux->valor << endl;
 			aux = aux->ant;
-
 		}
 	}
 }
